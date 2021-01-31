@@ -1,0 +1,126 @@
+---
+title: "Module 7 - probabilité et distribution"
+author: "..."
+date: "..."
+output: html_document
+---
+
+<!-- NOTE PRELIMINAIRE
+N'hésitez pas à vous aider des snippets ! 
+--> 
+
+```{r setup}
+SciViews::R
+```
+
+# Etude et niveau de stress
+
+Sur base d'un questionnaire, des participants ont été interrogés dans la rue afin de déterminer leur niveau de stress et leur niveau d'étude. Toutes les données collectées ont été dénombrées dans le tableau `tab_stress`.  Les chercheurs obtiennent le tableau suivant\ : 
+
+```{r stress_data}
+stress <- tibble::tibble(
+  etude = c(rep("secondaire", 50), rep("bachelier", 120), rep("master", 90), rep("doctorat", 20)),
+  stress = c(rep("faible", 11), rep("modere", 15), rep("eleve", 24),
+             rep("faible", 35), rep("modere", 63), rep("eleve", 22),
+             rep("faible", 18), rep("modere", 53), rep("eleve", 19),
+             rep("faible", 3),  rep("modere", 6),  rep("eleve", 11)
+             ),
+  id = 1:length(etude)
+  )
+
+(tab_stress <- table(stress$etude, stress$stress))
+```
+
+Sur base du tableau ci-dessus, répondez aux questions suivantes : 
+
+- Quelle est la probabilité d'avoir un master et un stress élevé ?
+
+```{r stress1}
+
+```
+
+- Quelle est la probabilité d'avoir un bachelier ou un stress faible ?
+
+```{r stress2}
+
+```
+
+- Quelle est la probabilité d'avoir un stress élevé si on a un master ?
+
+```{r stress3}
+
+```
+
+# Diagnostique cancer
+
+Mme X vient de passer une mammographie qui a détecté une anomalie. Sachant que la prévalence du cancer du sein est de 0.1%, que la probabilité d’avoir un résultat positif (anomalie à la mammographie) si l’on a un cancer est de 90% et que dans 15% des cas, le test se trompe pour les personnes saines, **quel est la probabilité que Mme X soit effectivement malade si la mammographie est positive ?**
+
+```{r cancer}
+
+```
+
+# Glycines
+
+Des sachets contenant 15 graines de glycine blanche du Japon sont vendus dans le commerce. Sachant que chaque graine donne lieu au plus à un pied de glycine blanche et a une probabilité de germination égale à 85% : 
+
+- Représentez la table des probabilités pour tous les évènements possibles liés à l'énoncé ci-dessus. 
+
+```{r glycine1}
+
+```
+
+- Quelle est la probabilité pour le jardinier de voir pousser au moins 12 pieds de glycines blanches ? 
+
+```{r glycine2}
+
+```
+
+- Quelle est la probabilité pour le jardinier de voir pousser moins de 8 pieds de glycines blanches ? 
+
+```{r glycine3}
+
+```
+
+# Chrysanthèmes
+
+La longueur des tiges de chrysanthèmes en fleurs coupées intervient dans leur classement par catégorie. Si la longueur de la tige est supérieur ou égale à 80cm, le chrysantème sera classé en catégorie extra. La qualité de la production a été étudiée sur un échantillon de 100 tiges coupées et on en conclut que la longueur des tigées coupée est une variable aléatoire qui suit une loi Normale de moyenne 92cm et d'écart-type 8cm. 
+
+- Représentez le graphique de densité de la distribution correspondant à la loi Normale de l'énoncé.
+
+```{r chrysantheme1}
+
+```
+
+- Quelle est la probabilité qu'une tige coupée soit classée dans la catégorie extra ? 
+
+```{r chrysantheme2}
+
+```
+
+- Quelle est la probabilité d'observer des longueurs de tiges coupées comprisent entre 75 et 100 cm 
+
+```{r chrysantheme3}
+
+```
+
+# Ours
+
+Un écologiste étudie le passage des ours en un point précis d’une rivière séparant un champ d’une forêt des Pyrénées. A l’issue d’un travail rigoureux de plusieurs semaines, il observe en moyenne 4 individus par jour.
+
+- Représentez le graphique de densité de la distribution correspondant à l'énoncé. 
+
+```{r ours1}
+
+```
+
+- Quelle est la probabilité qu'il observe précisément 6 ours par jour ? 
+
+```{r ours2}
+
+```
+
+- Quelle est la probabilité qu'il observe moins de 3 ours par jour ? 
+
+```{r ours3}
+
+```
